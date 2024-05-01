@@ -25,7 +25,7 @@ async def ping_address(session, publicAddress, wif):
 
                 logging.info(time.strftime("%d-%m-%y %H:%M ") + wif + " " + publicAddress + " " + str(trans))
 
-                if float(balance) > -0.000000001:
+                if float(balance) > 0.00000000:
                     logging.info(''+ time.strftime("%m-%d-%y %H:%M:%S") +','+ wif +','+publicAddress+' ,balance '+str(balance))
                     print("Congratulations!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
                     # print(wif)
