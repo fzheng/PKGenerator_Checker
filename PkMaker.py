@@ -25,11 +25,11 @@ async def ping_address(session, publicAddress, wif):
 
                 logging.info(time.strftime("%d-%m-%y %H:%M ") + wif + " " + publicAddress + " " + str(trans))
 
-                if float(balance) > 0.00000000:
+                if float(balance) > -0.000000001:
                     logging.info(''+ time.strftime("%m-%d-%y %H:%M:%S") +','+ wif +','+publicAddress+' ,balance '+str(balance))
-                    print("Congratulations...alert the world cause you just made some sort of history friend!")
-                    print(wif)
-                    with open('results.txt', 'a+') as f:
+                    print("Congratulations!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                    # print(wif)
+                    with open('found.txt', 'a+') as f:
                         f.write(''+ time.strftime("%m-%d-%y %H:%M:S") +','+ wif +','+publicAddress+' ,balance '+str(balance))
     except (aiohttp.ClientError, ValueError, KeyError):
         print("An error occurred")
